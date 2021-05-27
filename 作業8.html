@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>第一個JavaScript程式</title>
+    <script language="javascript">
+      var n = prompt('請輸入正整數', '');
+      for (var i = 1; i <= n; i++) {
+        //建立當排一開始的空格
+        for (var j = 0; j <= n - i; j++) {
+          document.write("&nbsp;&nbsp");
+        }
+        //建立當排空格後的符號
+        for (k = 0; k < i * 2 - 1; k++) {
+          document.write("*");
+        }
+        document.write('<br>');
+      }
+      var k = 2 * n - 1; //聖誕樹最寬的地方
+      var l = 1; //樹根的寬度
+      var m = (k - l) / 2; //填充空白的地方
+      for (i = 0; i < n; i++) {
+        //目前建立第幾排聖誕樹的樹根
+        for (j = 0; j < m*1.1; j++) {
+          //建立當排一開始的空格
+          document.write("&nbsp;&nbsp");
+        }
+        for (k = 0; k < l; k++) {
+          //建立當排空格後的符號
+          document.write("*");
+        }
+        document.write('<br>');
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>聖誕樹</h1>
+  </body>
+</html>
